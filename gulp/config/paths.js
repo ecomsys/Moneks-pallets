@@ -1,6 +1,6 @@
 import path from 'path';
 
-const buildFolder = './dist';
+const buildFolder = './docs';
 const srcFolder = './src';
 
 const filePaths = {
