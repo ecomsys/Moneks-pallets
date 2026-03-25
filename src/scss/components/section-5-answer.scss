@@ -1,0 +1,142 @@
+.section-answer {
+    .title {
+        margin-bottom: rem(85);
+
+        @include md {
+            margin-bottom: rem(45);
+        }
+    }
+
+    .tile-1 {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        p {
+            position: relative;
+            top: -5px;
+            padding: rem(36) rem(67);
+            font-size: rem(29);
+            line-height: 118%;
+            font-weight: 400;
+            color: var(--color-black);
+            border: 2px solid rgb(0, 0, 0, 0.5);
+            background-color: var(--color-white);
+            @include md{
+                font-size: rem(23);
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: rem(100);
+                height: rem(50);
+                top: rem(-46);
+                left: 30%;
+                background-image: url(../../icons/angle.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+    }
+
+    .tile-2 {
+        padding-top: 1rem;
+        @include sm{
+            padding-top: 2.5rem;
+        }
+
+        input[type="text"],
+        input[type="tel"] {
+            font-size: rem(19);
+            line-height: rem(23);
+            font-weight: 400;
+            width: 100%;
+            padding: rem(30) rem(37);
+            color: var(--color-box);
+            border: 2px solid var(--color-border);
+            margin-bottom: rem(14);
+        }
+
+        .checkbox {
+            font-size: rem(13);
+            line-height: rem(15);
+            font-weight: 500;
+            color: var(--color-black);
+            margin-top: rem(20);
+            margin-bottom: rem(20);
+        }
+
+        .form-title {
+            display: block;
+            font-size: rem(33);
+            font-weight: 500;
+            line-height: rem(39);
+            color: var(--color-accent);
+            margin-bottom: rem(42);
+        }
+        
+        .form-lock{
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 1.5rem;
+            svg{
+                width: rem(10);
+                height: rem(10);
+            }
+            span{
+                font-size: rem(12);
+                line-height: rem(15);
+                font-weight: 300; 
+            }
+        }
+
+    }
+// ------------------------------------------ Custom checkbox ----------------------------------------------------------
+    .checkbox {
+        display: inline-flex;
+        gap: 4px;
+        align-items: center;
+        text-wrap: nowrap;
+        cursor: pointer;
+
+        &__input {
+            appearance: none;
+            position: absolute;
+
+
+            &:disabled+.checkbox__box {
+                opacity: 0.7;
+            }
+
+            &:checked+.checkbox__box {
+                border-color: var(--color-border);
+                background-color: var(--color-accent);
+                background-image: url(../../icons/check-solid.svg);
+                background-repeat: no-repeat;
+                background-size: 80%;
+                background-position: center;
+            }
+
+            &:checked:disabled+.checkbox__box {
+                opacity: 0.7;
+            }
+        }
+
+
+        &__box {
+            display: block;
+            border: 2px solid var(--color-border);
+            border-radius: none;
+            width: rem(23);
+            height: rem(23);
+        }
+
+        &__text {
+            margin-left: 0.5rem;
+            display: block;
+        }
+    }
+}

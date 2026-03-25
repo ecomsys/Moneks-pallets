@@ -1,0 +1,65 @@
+.section-why {
+    padding-top: rem(130);
+
+    @include md {
+        padding-top: rem(65);
+    }
+
+    .title {
+        margin-bottom: rem(85);
+
+        @include md {
+            margin-bottom: rem(45);
+        }
+    }
+
+    .tile {
+        height: 100%;
+        padding: rem(30);
+        background-color: var(--color-white);
+        border: 2px solid var(--color-border);
+
+        .icon {
+            opacity: 0.6;
+            width: 100%;
+        }
+
+        b {
+            display: block;
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+            font-size: rem(19);
+            line-height: 110%;
+            font-weight: 700;
+            color: var(--color-accent);
+        }
+
+        p {
+            font-size: rem(16);
+            line-height: 120%;
+            font-weight: 300;
+            color: rgb(0, 0, 0, 0.45);
+        }
+
+        @include sm {
+            padding: rem(10);        
+            b {
+                font-size: rem(15);
+            }    
+            p {
+                font-size: rem(13);
+            }
+
+            .icon {
+                overflow: hidden;
+                max-height: 75px;                
+            }
+        }
+        @include xs{
+        b {
+            font-size: rem(11.5);
+        }    
+        }
+        
+    }
+}

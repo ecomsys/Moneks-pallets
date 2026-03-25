@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+@@include('html/components/head.html', {
+'title': 'Главная'
+})
+
+
+
+<body>
+  <div class="wrapper">
+    <div class="service-overlay"></div>
+    @@include('html/sections/header.html')
+    <main class="page">
+      @@include('html/sections/section-1-slider.html')
+      @@include('html/sections/section-2-catalog.html')
+      @@include('html/sections/section-3-onas.html')
+      @@include('html/sections/section-4-why.html')
+      @@include('html/sections/section-5-answer.html')
+    </main>
+
+    @@include('html/sections/footer.html')
+
+  </div>
+  @@include('html/components/script.html')
+</body>
+
+</html>

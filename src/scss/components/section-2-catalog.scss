@@ -1,0 +1,57 @@
+.section {
+    padding-top: rem(130);
+    padding-bottom: rem(120);
+
+    @include md {
+        padding-top: rem(65);
+        padding-bottom: rem(60);
+    }
+}
+
+.section-catalog {
+    .title{
+        margin-bottom: rem(85);
+        @include md{
+            margin-bottom: rem(45);
+        }
+    }
+    .product {
+        padding: rem(30) rem(15);
+        border: 1px solid var(--color-border);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__title {
+            padding: 0 rem(15);
+            margin-top: rem(15);
+            margin-bottom: rem(15);
+
+            h3 {
+                font-size: rem(20);
+                line-height: 115%;
+                font-weight: 500;
+            }
+        }
+
+        &__describtion {
+            padding: 0 rem(15);
+            margin-bottom: rem(30);
+
+            p {
+                font-size: rem(18);
+                line-height: 115%;
+                font-weight: 300;
+            }
+        }
+
+        &__button {
+            padding: 0 rem(15);
+
+            .btn-main {
+                width: 100%;
+            }
+        }
+    }
+}
